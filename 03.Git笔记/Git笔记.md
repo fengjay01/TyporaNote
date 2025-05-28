@@ -60,12 +60,31 @@ git push -u origin main
 
 5.更新文件
 
-```
+```bash
 #添加修改和新的文件并处理被删除的文件
 git add . && git add -u
 
 #会添加所有新文件，会更新所有修改文件，会记录所有被删除的文件
 git add -A
+
+#提交
+git commit -m "first commit"
+
+#推送
+git push origin main
+```
+
+6.Github官方方法
+
+```bash
+# 一级标题是“Learm-stm32”
+echo "# Learm-stm32" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/fengjay01/Learm-stm32.git
+git push -u origin main
 ```
 
 
@@ -75,3 +94,16 @@ git add -A
 - 更改复制粘贴快捷键（Ctrl+Shift+C/V）
 
 ![image-20250519163632935](./assets/image-20250519163632935.png)
+
+## 二、Git 一些问题
+
+### 1.代理超时
+
+这样就可以清除 Git 的代理设置，让其直接连接网络进行操作
+
+```
+git config --global --unset http.proxy 
+git config --global --unset https.proxy
+```
+
+### 2.Linux每次都要输入账户token
