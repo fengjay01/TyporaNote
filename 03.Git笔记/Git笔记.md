@@ -70,6 +70,9 @@ git add -A
 #提交
 git commit -m "first commit"
 
+
+#如果仓库里有本地没有的文件，先合并再推送
+git pull origin main --rebase
 #推送
 git push origin main
 ```
